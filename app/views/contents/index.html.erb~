@@ -5,3 +5,4 @@
 <h1>かとりょーが作ったもの</h1>
 <%= link_to 'にせほボタン', 'http://nisehobutton.heroku.com', :target => '_blank' %>
 
+
