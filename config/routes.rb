@@ -1,5 +1,6 @@
 Katryo::Application.routes.draw do
   get "contents/index"
+  get "katryogift/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
