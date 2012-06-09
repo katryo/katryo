@@ -9,18 +9,38 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--script type='text/javascript' src='js/example-plugin.js'></script--> 
 
-<script type='text/javascript'>
-$(window).load(function() {
-  $('#slider').nivoSlider({
-    controlNav : true, /* ページャーを表示 */
-    controlNavThumbs : true, /* ページャーにサムネイルを使用 */
-    controlNavThumbsFromRel : true /* rel 属性にサムネイルのパス */
-  )};
-)};
+
+
+
+<script>
+$(function() {
+  $('#water').lake({
+    'speed': 1.5, //スピード
+    'scale': 5, //ウェイブの大きさ
+    'waves': 10 //ウェイブ数
+  });
+});
 </script>
 
+<script type="text/javascript">
+$("document").ready(function(){
+$('.flexslider').flexslider();
+});
+</script>
+
+<script type='text/javascript'>
+jQuery(document).ready(function() {
+	jQuery('#slider').after('<div id="pager" class="clearfix">').cycle({ 
+		fx: 'fade',
+		speed:  1500,
+		timeout: 7000,
+		pager:  '#pager',
+		pause: 1,
+		cleartype: true
+	});
+    });
+</script>
 
 
   <script type="text/javascript">
