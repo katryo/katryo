@@ -28,6 +28,7 @@ gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'
+gem 'nivo', :git => "git://github.com/rossnelson/nivo.git"
 
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
