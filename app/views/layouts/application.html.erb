@@ -12,16 +12,28 @@
 
 
 
-
-<script>
-$(function() {
-  $('#water').lake({
-    'speed': 1.5, //スピード
-    'scale': 5, //ウェイブの大きさ
-    'waves': 10 //ウェイブ数
-  });
-});
+<script type="text/javascript">
+    $(function(){
+    
+      $('#midground').css({backgroundPosition: '0px 0px'});
+      $('#foreground').css({backgroundPosition: '0px 0px'});
+      $('#background').css({backgroundPosition: '0px 0px'});
+    
+        $('#midground').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 240000, 'linear');
+        
+        $('#foreground').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 120000, 'linear');
+        
+        $('#background').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 480000, 'linear');
+        
+    });
 </script>
+
 
 <script type="text/javascript">
 $("document").ready(function(){
@@ -29,19 +41,18 @@ $('.flexslider').flexslider();
 });
 </script>
 
-<script type='text/javascript'>
-jQuery(document).ready(function() {
-	jQuery('#slider').after('<div id="pager" class="clearfix">').cycle({ 
-		fx: 'fade',
-		speed:  1500,
-		timeout: 7000,
-		pager:  '#pager',
-		pause: 1,
-		cleartype: true
-	});
-    });
-</script>
 
+<script type='text/javascript'>
+$(document).ready(function() {
+  $('#slider').cycle({
+    fx : 'fade', /* fade, scrollLeft, scrollUp など */
+    speed : 1500, /* エフェクトのスピード */
+    timeout : 1000, /* スライドの間隔 */
+    easing : 'swing', /* easing */
+    pause : 1 /* ホバー時の一時停止 */
+  });
+});
+</script>
 
   <script type="text/javascript">
 
@@ -59,6 +70,11 @@ jQuery(document).ready(function() {
 </head>
 <body>
 
+    <!--div id="slider">
+        <img src="http://dl.dropbox.com/u/17538030/ev58a.jpg" alt="anathema_keyvisual2">
+        <img src="http://dl.dropbox.com/u/17538030/yakei2.jpg" alt="anathema_keyvisual">
+
+                      </div><!/ai-->
 <%= yield %>
 
 </body>

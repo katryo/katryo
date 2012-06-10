@@ -13,4 +13,24 @@
 .nivo-controlNav a img {
      display : bloack;
 }
+#background {
+	background: url(https://dl.dropbox.com/u/17538030/foreground.png) repeat 5% 5%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 100;
+}
+
+#midground {
+	background: url(https://dl.dropbox.com/u/17538030/midground.png) repeat 20% 20%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 100;
+
+
+#foreground {
+	background: url(https://dl.dropbox.com/u/17538030/foreground.png) repeat 90% 110%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 200;
+}
 
