@@ -13,46 +13,52 @@
 
 
 <script type="text/javascript">
+
     $(function(){
     
-      $('#midground').css({backgroundPosition: '0px 0px'});
-      $('#foreground').css({backgroundPosition: '0px 0px'});
-      $('#background').css({backgroundPosition: '0px 0px'});
+      $('#katryotext').css({backgroundPosition: '0px 0px'});
+      $('#twittertext').css({backgroundPosition: '0px 0px'});
     
-        $('#midground').animate({
-            backgroundPosition:"(-10000px -2000px)"
-        }, 240000, 'linear');
+        $('#katryotext').animate({
+            backgroundPosition:"(-10000000px -1500000px)"
+        }, 24000000, 'linear');
         
-        $('#foreground').animate({
+        $('#twittertext').animate({
             backgroundPosition:"(-10000px -2000px)"
         }, 120000, 'linear');
-        
-        $('#background').animate({
-            backgroundPosition:"(-10000px -2000px)"
-        }, 480000, 'linear');
-        
     });
+    
+    
+    $(function() {
+    
+        $('#link_bg').css({backgroundPosition: '0px 0px'});
+    $("#link_bg").hover(function() {
+        $el = $(this);
+        $el.stop().animate({ backgroundPosition: "(-100000000px -10000000px)"}, 500000000); // マウスオーバー時の文字色とアニメーションの速さ
+    }, function() {
+        $el = $(this);
+        $el.stop().animate({ backgroundPosition: "(0px 100px)"}, 500); // マウスオーバー後の文字色とアニメーションの速さ
+     
+    });
+});
+
 </script>
 
 
 <script type="text/javascript">
 $("document").ready(function(){
-$('.flexslider').flexslider();
+$('.flexslider').flexslider({
+	
+
+directionNav: false,
+controlNav: false
+}
+);
 });
 </script>
 
 
-<script type='text/javascript'>
-$(document).ready(function() {
-  $('#slider').cycle({
-    fx : 'fade', /* fade, scrollLeft, scrollUp など */
-    speed : 1500, /* エフェクトのスピード */
-    timeout : 1000, /* スライドの間隔 */
-    easing : 'swing', /* easing */
-    pause : 1 /* ホバー時の一時停止 */
-  });
-});
-</script>
+
 
   <script type="text/javascript">
 
