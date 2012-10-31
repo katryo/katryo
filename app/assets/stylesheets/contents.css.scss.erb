@@ -6,36 +6,73 @@
  // background: url('http://dl.dropbox.com/u/17538030/paper2.jpg');
 //}
 #slider{
-     background : #fff  no-repeat 50% 50%;
+     background: #fff  no-repeat 50% 50%;
 }
 #slider img { display:none; }
- 
-#link_bg {
-        background: url(https://dl.dropbox.com/u/17538030/foreground.png) repeat 5% 5%;
-	top: 0; left: 0; right: 0; bottom: 0;
-	z-index: 1;
-        }
 
-
-#katryotext {
-	background: url(<%=asset_path("katryo.png") %>) repeat 5% 5%;
-	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
-	z-index: -1;
+#logo {
+  margin-top: 30px;
 }
 
-#midground {
-	background: url(https://dl.dropbox.com/u/17538030/midground.png) repeat 20% 20%;
-	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
-	z-index: 100;
-	}
-
-
-#foreground {
-	background: url(https://dl.dropbox.com/u/17538030/foreground.png) repeat 90% 110%;
-	position: absolute;
-	top: 0; left: 0; right: 0; bottom: 0;
-	z-index: 200;
+.flexslider{
+-webkit-transform: rotate(2deg); /* 回転 */
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+body {
+  background: url(<%= asset_path('retina_wood.png') %>) ;
 }
 
+.rice-paper{
+  background: url(<%= asset_path('ricepaper2.png') %>) ;
+}
+
+.paper-3{
+  background: url(<%= asset_path('paper_3.png') %>) ;
+}
+
+
+div.paper {
+  margin: 20px 0;
+  padding: 20px 20px;
+  position: relative;
+ // -webkit-box-shadow: 0 10px 6px -6px #777;
+//  -moz-box-shadow: 0 10px 6px -6px #777;
+//  box-shadow: 0 10px 6px -6px #777;
+  
+}
+
+
+.drop-shadow {
+   position:relative;
+  // width:90%;
+}
+
+.drop-shadow:before,
+.drop-shadow:after {
+   content:"";
+   position:absolute;
+   z-index: -2;
+   bottom:15px;
+   left:10px;
+   width:60%;
+   height:20%;
+   //max-width:300px;
+   -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+   -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+   box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+   -webkit-transform:rotate(-1deg);
+   -moz-transform:rotate(-1deg);
+   -o-transform:rotate(-1deg);
+   transform:rotate(-1deg);
+}
+
+.drop-shadow:after{
+   right:10px;
+   left:auto;
+   -webkit-transform:rotate(1deg);
+   -moz-transform:rotate(1deg);
+   -o-transform:rotate(1deg);
+   transform:rotate(1deg);
+ }

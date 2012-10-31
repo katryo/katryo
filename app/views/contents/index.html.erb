@@ -1,99 +1,105 @@
-<div id="katryotext"></div>
-<div class="navbar">
-  <div class="navbar-inner">
-    <div class="container">
-      <span class="icon-bar"></span>
-      <a class="brand" href="/">かとりょーについて</a>
-    </div>
-  </div>
-</div>
 <div class="container">
 
+  <div class="row">
+    <div class="span4 offset4">
+      <div id="logo">
+        <%= image_tag("katryo_sketch.png")%>
+        </div>
+        </div>
+      </div>
 
 
-<div class="row">
-<div class="span4">
-<div class="flexslider">
-<ul class="slides">
-<li>
-<%= image_tag("shot2_icon.jpg")%>
-<p class="flex-caption">かとりょーの日常</p>
-</li>
-<li>
-<%= image_tag("seat_icon.jpg")%>
-<p class="flex-caption">かとりょーの日常</p>
-</li>
-<li>
-<%= image_tag("rain2_icon.jpg")%>
-<p class="flex-caption">かとりょーの日常</p>
-</li>
-</ul>
-</div>
-</div>
-
-<div class="span4">
-<h2>書いてきたもの</h2>
-<p>
-<br>
-<%= link_to 'はてなプロフィール', 'http://www.hatena.ne.jp/katryo/', :target => '_blank', :class => 'btn btn-large btn-info' %><br><br>
-<%= link_to 'ブログ', 'http://katryo.hatenablog.com/', :target => '_blank', :class => 'btn btn-large btn-info' %><br><br>
-<%= link_to '技術ブログ', 'http://d.hatena.ne.jp/katryo/', :target => '_blank' , :class => 'btn btn-large btn-info' %><br><br>
- <%= link_to 'github', 'https://github.com/katryo', :target => '_blank', :class => 'btn btn-large btn-info' %><br><br>
-</p>
-</div>
-
-    <div class="span4">
-        <h2>趣味</h2>
-        <br>
-        <%= link_to 'Twitter', 'http://twitter.com/#/katryo', :target => '_blank', :class => 'btn btn-large btn-info' %><br><br>
-      <%= link_to 'はてなブックマーク', 'http://b.hatena.ne.jp/katryo/bookmark', :target => '_blank', :class => 'btn btn-large btn-info' %><br><br>
-    </div>
-  </div>
-
-<div class="row">
-<div class="span4 offset4">
-	<%= image_tag("katryo.png")%>
-	
-</div>
-</div>
-
-<div class="row">
-<div class="span4">
-
-<%= link_to image_tag("nisehobutton.jpg"), 'http://nisehobutton.heroku.com', :target => '_blank' %>
-<p>
-<h4>にせほボタン</h4>
-</p>
-</div>
+      <div class="paper drop-shadow rice-paper">
 
 
-<div class="span4">
+        <div class="row">
+          <div class="span4">
+            <div class="flexslider">
+              <ul class="slides">
+                <li>
+                <%= image_tag("shot2_icon.jpg")%>
+                <p class="flex-caption">かとりょーの日常</p>
+                </li>
+                <li>
+                <%= image_tag("seat_icon.jpg")%>
+                <p class="flex-caption">かとりょーの日常</p>
+                </li>
+                <li>
+                <%= image_tag("rain2_icon.jpg")%>
+                <p class="flex-caption">かとりょーの日常</p>
+                </li>
+              </ul>
+            </div><!--flexslider-->
+          </div><!--span4-->
 
-<%= link_to image_tag("higashi.jpg", :width => "auto"), 'http://higashinoterakoya.herokuapp.com', :target => '_blank' %>
-<p>
-<h4>ゲーム制作サークル「ひがしのてらこや。」</h4>
-</p>
-</div>
 
-<div class="span4">
+          <div class="span3">
+            <h2>書いてきたもの</h2>
+            <p>
+            <br>
+            <%= link_to 'はてなプロフィール', 'http://www.hatena.ne.jp/katryo/', :target => '_blank', :class => 'btn btn-large btn-info' %><br><br>
+            <%= link_to 'ブログ', 'http://katryo.hatenablog.com/', :target => '_blank', :class => 'btn btn-large btn-info' %><br><br>
+            <%= link_to '技術ブログ', 'http://d.hatena.ne.jp/katryo/', :target => '_blank' , :class => 'btn btn-large btn-info' %><br><br>
+            <%= link_to 'github', 'https://github.com/katryo', :target => '_blank', :class => 'btn btn-large btn-info' %><br><br>
+            </p>
+          </div><!--span3-->
 
-<%= link_to image_tag("anathema.jpg", :width => "auto"), 'http://anathemaphysics.herokuapp.com', :target => '_blank' %>
-<p>
-<h4>ノベルゲーム「アナテマ・フィジクス」</h4>
-</p>
-</div>
+          <div class="span3">
+            <h2>趣味</h2>
+            <br>
+            <%= link_to 'Twitter', 'http://twitter.com/#/katryo', :target => '_blank', :class => 'btn btn-large btn-info' %><br><br>
+            <%= link_to 'はてなブックマーク', 'http://b.hatena.ne.jp/katryo/bookmark', :target => '_blank', :class => 'btn btn-large btn-info' %><br><br>
+          </div><!--span3-->
+        </div><!--div class="row"-->
+
+        <div class="row">
+          <div class="span4 offset4">
+            <%= image_tag("katryo.png")%>
+
+          </div>
+        </div>
 
 
-</div>
+        <div class="row">
 
-<div class="row">
-<div class="span4">
 
-<%= link_to image_tag("katryogift.jpg", :width => "auto"), '/katryogift/index', :target => '_blank' %>
-<p>
-<h4>katryogift〜かとりょー支援プラットフォーム〜</h4>
-</p>
+          <div class="span3">
+            <%= link_to image_tag("nisehobutton.jpg"), 'http://nisehobutton.heroku.com', :target => '_blank' %>
+            <p>
+            <h4>にせほボタン</h4>
+            </p>
+          </div>
 
-</div>
-</div>
-</div>
+
+          <div class="span3">
+            <%= link_to image_tag("higashi.jpg", :width => "auto"), 'http://higashinoterakoya.herokuapp.com', :target => '_blank' %>
+            <p>
+            <h4>ゲーム制作サークル「ひがしのてらこや。」</h4>
+            </p>
+          </div>
+
+          <div class="span3">
+            <%= link_to image_tag("anathema.jpg", :width => "auto"), 'http://anathemaphysics.herokuapp.com', :target => '_blank' %>
+            <p>
+            <h4>ノベルゲーム「アナテマ・フィジクス」</h4>
+            </p>
+          </div>
+
+
+        </div><!--row-->
+
+        <div class="row">
+          <div class="span4">
+
+            <%= link_to image_tag("katryogift.jpg", :width => "auto"), '/katryogift/index', :target => '_blank' %>
+            <p>
+            <h4>katryogift〜かとりょー支援プラットフォーム〜</h4>
+            </p>
+
+        </div><!--span-->
+          </div><!--row-->
+
+      </div><!--class="paper"-->
+
+
+    </div><!--div.container-->

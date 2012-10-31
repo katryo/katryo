@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Katryo</title>
+  <title>katryo</title>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
   <![endif]-->
@@ -9,57 +9,6 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-<script type="text/javascript">
-
-    $(function(){
-    
-      $('#katryotext').css({backgroundPosition: '0px 0px'});
-      $('#twittertext').css({backgroundPosition: '0px 0px'});
-    
-        $('#katryotext').animate({
-            backgroundPosition:"(-10000000px -1500000px)"
-        }, 24000000, 'linear');
-        
-        $('#twittertext').animate({
-            backgroundPosition:"(-10000px -2000px)"
-        }, 120000, 'linear');
-    });
-    
-    
-    $(function() {
-    
-        $('#link_bg').css({backgroundPosition: '0px 0px'});
-    $("#link_bg").hover(function() {
-        $el = $(this);
-        $el.stop().animate({ backgroundPosition: "(-100000000px -10000000px)"}, 500000000); // マウスオーバー時の文字色とアニメーションの速さ
-    }, function() {
-        $el = $(this);
-        $el.stop().animate({ backgroundPosition: "(0px 100px)"}, 500); // マウスオーバー後の文字色とアニメーションの速さ
-     
-    });
-});
-
-</script>
-
-
-<script type="text/javascript">
-$("document").ready(function(){
-$('.flexslider').flexslider({
-	
-
-directionNav: false,
-controlNav: false
-}
-);
-});
-</script>
-
-
-
-
   <script type="text/javascript">
 
   var _gaq = _gaq || [];
