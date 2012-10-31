@@ -1,25 +1,38 @@
-// Place all the styles related to the contents controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-//body {
- // background: url('http://dl.dropbox.com/u/17538030/paper2.jpg');
-//}
 #slider{
      background: #fff  no-repeat 50% 50%;
 }
 #slider img { display:none; }
 
+
+
 #logo {
   margin-top: 30px;
 }
 
-.flexslider{
--webkit-transform: rotate(2deg); /* 回転 */
-  -moz-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
-  transform: rotate(2deg);
+
+#top-right{
+z-index: 2;
+position: absolute;
+top: 0%;
+right: 0%;
+  -webkit-transform: rotate(-20deg); /* 回転 */
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
 }
+
+.flexslider{
+  -webkit-transform: rotate(0deg); /* 回転 */
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  border: 0;
+}
+
+#no-border{
+  border: 0;
+}
+
 body {
   background: url(<%= asset_path('retina_wood.png') %>) ;
 }
@@ -34,15 +47,62 @@ body {
 
 
 div.paper {
-  margin: 20px 0;
-  padding: 20px 20px;
+  margin: 40px 0;
+  padding: 40px 40px;
   position: relative;
- // -webkit-box-shadow: 0 10px 6px -6px #777;
-//  -moz-box-shadow: 0 10px 6px -6px #777;
-//  box-shadow: 0 10px 6px -6px #777;
-  
+     -webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.4);
+     -moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.4);
+     box-shadow:0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
+section.item {
+margin: 40px 0;
+}
+
+@mixin ease {
+    -webkit-transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   -o-transition: all .1s ease-in-out;
+   transition: all .1s ease-in-out;
+}
+
+.item-image-odd img:hover{
+@include ease;
+-webkit-transform: scale(1.2) rotate(-1deg);
+   -moz-transform: scale(1.2) rotate(-1deg);
+   -o-transform: scale(1.2) rotate(-1deg);
+   transform: scale(1.2) rotate(-1deg);
+}
+
+.item-image-even img:hover{
+@include ease;
+-webkit-transform: scale(1.2) rotate(1deg);
+   -moz-transform: scale(1.2) rotate(1deg);
+   -o-transform: scale(1.2) rotate(1deg);
+   transform: scale(1.2) rotate(1deg);
+}
+
+
+
+.item-image-odd{
+  -webkit-transform: rotate(1deg); /* 回転 */
+  -moz-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  transform: rotate(1deg);}
+
+.item-image-even{
+  -webkit-transform: rotate(-1deg); /* 回転 */
+  -moz-transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+}
+
+
+.surround-shadow{
+     -webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.4);
+     -moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.4);
+     box-shadow:0 1px 3px rgba(0, 0, 0, 0.4);
+}
 
 .drop-shadow {
    position:relative;
@@ -56,7 +116,7 @@ div.paper {
    z-index: -2;
    bottom:15px;
    left:10px;
-   width:60%;
+   width:47%;
    height:20%;
    //max-width:300px;
    -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
