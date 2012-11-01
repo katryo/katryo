@@ -6,6 +6,43 @@
    transition: all .1s ease-in-out;
 }
 
+@mixin tape{
+content: url(<%= asset_path('tape2.png') %>);
+position: absolute;
+top: -12%;
+left: 10%;
+}
+
+.tape1{
+  :before {
+  @include tape;
+  top: -16%;
+left: 20%;
+  }
+}
+
+.tape2{
+  :before {
+  @include tape;
+left: 30%;
+  }
+}
+
+.tape3{
+  :before {
+  @include tape;
+left: 15%;
+  }
+}
+
+.tape4{
+  :before {
+  @include tape;
+  left: 35%
+  }
+}
+
+
 .mail{
 font-size: 0.6em;
 img{
@@ -78,11 +115,7 @@ right: 0%;
   transform: rotate(0deg);
   border: 0;
   :before {
-content: url(<%= asset_path('tape2.png') %>);
-position: absolute;
-top: -10%;
-left: 10%;
-z-index: 10;
+  @include tape;
 }
 }
 
@@ -121,19 +154,11 @@ margin: 40px 0;
 
 .item-image-odd img:hover{
 @include ease;
--webkit-transform: scale(1.1) rotate(-1deg);
-   -moz-transform: scale(1.1) rotate(-1deg);
-   -o-transform: scale(1.1) rotate(-1deg);
-   transform: scale(1.1) rotate(-1deg);
 
 }
 
 .item-image-even img:hover{
 @include ease;
--webkit-transform: scale(1.1) rotate(1deg);
-   -moz-transform: scale(1.1) rotate(1deg);
-   -o-transform: scale(1.1) rotate(1deg);
-   transform: scale(1.1) rotate(1deg);
 }
 
 
@@ -153,6 +178,7 @@ margin: 40px 0;
 }
 
 
+
 .surround-shadow{
      -webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.4);
      -moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.4);
@@ -161,11 +187,7 @@ margin: 40px 0;
 
 .drop-shadow {
    position:relative;
-  // width:90%;
-}
-
-.drop-shadow:before,
-.drop-shadow:after {
+   &:before, &:after {
    content:"";
    position:absolute;
    z-index: -2;
@@ -181,13 +203,18 @@ margin: 40px 0;
    -moz-transform:rotate(-1deg);
    -o-transform:rotate(-1deg);
    transform:rotate(-1deg);
-}
-
-.drop-shadow:after{
+   }
+   
+   &:after{
    right:10px;
    left:auto;
    -webkit-transform:rotate(1deg);
    -moz-transform:rotate(1deg);
    -o-transform:rotate(1deg);
    transform:rotate(1deg);
+
  }
+
+   
+}
+
