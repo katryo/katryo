@@ -6,12 +6,26 @@
    transition: all .1s ease-in-out;
 }
 
+@mixin scale{
+    -webkit-transform: scale(1.02); /* 回転 */
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+
+}
+
 @mixin tape{
 content: url(<%= asset_path('tape2.png') %>);
 position: absolute;
 top: -10%;
 left: 10%;
+@media (min-width: 500px) {
+content: none;
+top: -30%;
+left: -30%;
 }
+}
+
 
 .tape1{
   :before {
@@ -152,11 +166,6 @@ margin: 40px 0;
 }
 
 
-.item-image-odd img:hover{
-@include ease;
-
-}
-
 .item-image-even img:hover{
 @include ease;
 }
@@ -168,13 +177,21 @@ margin: 40px 0;
   -moz-transform: rotate(1deg);
   -ms-transform: rotate(1deg);
   transform: rotate(1deg);
+  img:hover{
+  @include ease;
+  @include scale;
   }
+}
 
 .item-image-even{
   -webkit-transform: rotate(-1deg); /* 回転 */
   -moz-transform: rotate(-1deg);
   -ms-transform: rotate(-1deg);
   transform: rotate(-1deg);
+  img:hover{
+  @include ease;
+  @include scale;
+  }
 }
 
 
