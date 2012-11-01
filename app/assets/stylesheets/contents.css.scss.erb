@@ -1,25 +1,57 @@
 @import url(http://fonts.googleapis.com/css?family=Patrick+Hand);
+@mixin ease {
+    -webkit-transition: all .1s ease-in-out;
+   -moz-transition: all .1s ease-in-out;
+   -o-transition: all .1s ease-in-out;
+   transition: all .1s ease-in-out;
+}
+
+.mail{
+font-size: 0.6em;
+img{
+width: 14%;
+}
+}
+
 
 .fascinate{
 font-family: 'Fascinate', cursive;
 }
 
-.jmadh{
-font-family: 'Just Me Again Down Here', cursive;
-font-size: 8em;
-margin: 20% 0;
-}
 
 .icon img{
-width: 20%;
+max-height: 8%;
+width: auto;
 }
 
 .patrick p{
 margin: 5% 0;
-text-align: left;
+line-height: 150%;
 font-family: 'Patrick Hand', cursive;
 font-size: 4em;
 }
+
+.contacts li{
+margin: 5% 0;
+line-height: 150%;
+font-family: 'Patrick Hand', cursive;
+font-size: 2em;
+
+:link, :visited {
+color: #851;
+}
+
+  :hover{
+  @include ease;
+  -webkit-transform: scale(1.1);
+   -moz-transform: scale(1.1);
+   -o-transform: scale(1.1);
+   transform: scale(1.1);
+
+  }
+}
+
+
 
 #slider{
      background: #fff  no-repeat 50% 50%;
@@ -82,12 +114,6 @@ section.item {
 margin: 40px 0;
 }
 
-@mixin ease {
-    -webkit-transition: all .1s ease-in-out;
-   -moz-transition: all .1s ease-in-out;
-   -o-transition: all .1s ease-in-out;
-   transition: all .1s ease-in-out;
-}
 
 .item-image-odd img:hover{
 @include ease;
