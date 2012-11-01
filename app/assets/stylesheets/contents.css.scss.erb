@@ -6,24 +6,18 @@
    transition: all .1s ease-in-out;
 }
 
-@mixin scale{
-    -webkit-transform: scale(1.02); /* 回転 */
-  -moz-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  transform: scale(1.02);
-
-}
-
 @mixin tape{
 content: url(<%= asset_path('tape2.png') %>);
 position: absolute;
 top: -10%;
 left: 10%;
-@media (min-width: 500px) {
-content: none;
-top: -30%;
-left: -30%;
 }
+
+@mixin scale{
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 
@@ -75,7 +69,7 @@ text-align: center;
 margin: 5% 0;
 line-height: 150%;
 font-family: 'Patrick Hand', cursive;
-font-size: 6em;
+font-size: 5em;
 }
 
 .contacts li{
@@ -167,8 +161,14 @@ margin: 40px 0;
 }
 
 
+.item-image-odd img:hover{
+@include ease;
+@include scale;
+}
+
 .item-image-even img:hover{
 @include ease;
+@include scale;
 }
 
 
@@ -178,21 +178,13 @@ margin: 40px 0;
   -moz-transform: rotate(1deg);
   -ms-transform: rotate(1deg);
   transform: rotate(1deg);
-  img:hover{
-  @include ease;
-  @include scale;
   }
-}
 
 .item-image-even{
   -webkit-transform: rotate(-1deg); /* 回転 */
   -moz-transform: rotate(-1deg);
   -ms-transform: rotate(-1deg);
   transform: rotate(-1deg);
-  img:hover{
-  @include ease;
-  @include scale;
-  }
 }
 
 
