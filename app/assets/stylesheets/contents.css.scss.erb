@@ -7,10 +7,12 @@
 }
 
 @mixin tape{
-content: url(<%= asset_path('tape2.png') %>);
-position: absolute;
-top: -10%;
-left: 10%;
+  @media screen and (min-width: 768px) {
+    content: url(<%= asset_path('tape2.png') %>);
+    position: absolute;
+    top: -12%;
+    left: 10%;
+  }
 }
 
 @mixin scale{
@@ -19,6 +21,14 @@ left: 10%;
   -ms-transform: scale(1.02);
   transform: scale(1.02);
 }
+
+
+@media screen and (max-width: 768px) {
+  header{
+  margin-top: 5%;
+  }
+}
+
 
 
 .tape1{
@@ -195,6 +205,8 @@ margin: 40px 0;
      box-shadow:0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
+  @media screen and (min-width: 768px) {
+
 .drop-shadow {
    position:relative;
    &:before, &:after {
@@ -226,3 +238,4 @@ margin: 40px 0;
  }
 }
 
+}
